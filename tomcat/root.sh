@@ -1,3 +1,3 @@
 #!/bin/sh
 
-export ISIS_ROOT=~/projects/isism
+export VIS_ROOT=~/projects/test_project
