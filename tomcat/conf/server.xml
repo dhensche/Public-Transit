@@ -1,0 +1,19 @@
+<Server port="8020" shutdown="SHUTDOWN">
+
+  <Service name="Catalina">
+    <Connector port="8086" />
+    <Engine name="Catalina" defaultHost="localhost">
+      <Host name="localhost" appBase="webapps">
+        <Context path="/visualizer" docBase="../../web" reloadable="true" antiJARLocking="true"/>
+		
+         <!-- remote address filter valve goes here -->
+
+
+        <Valve className="org.apache.catalina.valves.FastCommonAccessLogValve"
+	                 directory="logs"  prefix="localhost_access_log." suffix=".log"
+	                 pattern="common" resolveHosts="false"/>        
+
+      </Host>
+    </Engine>
+  </Service>
+</Server>

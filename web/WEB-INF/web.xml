@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <display-name>Web DB IDE</display-name>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--                       Filters.                                      -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <filter>
+        <display-name>Stripes Filter</display-name>
+        <filter-name>StripesFilter</filter-name>
+        <filter-class>net.sourceforge.stripes.controller.StripesFilter</filter-class>
+        <!-- REQUIRED init parameter for the Stripes Filter. -->
+        <init-param>
+            <param-name>ActionResolver.Packages</param-name>
+            <param-value>visualizer.site.actions</param-value>
+        </init-param>
+        <!-- Optional init parameter for the Stripes Filter. -->
+        <init-param>
+            <param-name>ActionBeanContext.Class</param-name>
+            <param-value>visualize.site.extensions.IsisActionContext</param-value>
+        </init-param>
+        <init-param>
+            <param-name>Extension.Packages</param-name>
+            <param-value>net.sourceforge.stripes.extensions, visualizer.site.extensions</param-value>
+        </init-param>
+    </filter>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--                       Filter mappings.                              -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+    <filter-mapping>
+        <filter-name>StripesFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>StripesFilter</filter-name>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--                       Servlets.                                     -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>net.sourceforge.stripes.controller.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--                       Servlet mappings.                             -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>*.page</url-pattern>
+    </servlet-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--              Session inactivity timeout.                            -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+<!--    &lt;!&ndash; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ &ndash;&gt;
+    &lt;!&ndash;              Error Pages.                                           &ndash;&gt;
+    &lt;!&ndash; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ &ndash;&gt;
+
+    <error-page>
+        <exception-type>java.lang.IllegalAccessException</exception-type>
+        <location>/WEB-INF/pages/error403.jsp</location>
+    </error-page>
+    &lt;!&ndash; SC_BAD_REQUEST &ndash;&gt;
+    <error-page>
+        <error-code>400</error-code>
+        <location>/WEB-INF/pages/error400.jsp</location>
+    </error-page>
+    &lt;!&ndash; SC_FORBIDDEN &ndash;&gt;
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/pages/error403.jsp</location>
+    </error-page>
+    &lt;!&ndash; SC_NOT_FOUND &ndash;&gt;
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/pages/error404.jsp</location>
+    </error-page>
+    &lt;!&ndash; SC_INTERNAL_SERVER_ERROR &ndash;&gt;
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/pages/error500.jsp</location>
+    </error-page>-->
+</web-app>
