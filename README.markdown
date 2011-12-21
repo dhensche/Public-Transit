@@ -7,16 +7,19 @@ To build the feed you will need:
 * sprintf module
 
 One way of getting the required tools is the following list of commands (run either unix, OSX or cygwin)
+
 ```shell
 git clone git://github.com/creationix/nvm.git ~/.nvm
 ```
 
 Then add the following to either ~/.bashrc (unix) or ~/.bash_profile (OSX)
+
 ```shell
 . ~/.nvm/nvm.sh
 ```
 
 The rest of the commands are:
+
 ```shell
 nvm install v0.6.5 #or any version you know is compatible
 nvm use v0.6.5
@@ -26,3 +29,4 @@ npm install async
 npm install sprintf
 
 node google_transit.js
+```
