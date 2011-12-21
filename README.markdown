@@ -1,3 +1,5 @@
+#Installating and Building
+
 This project uses node.js to attempt to create the feed needed for google public transit. 
 To build the feed you will need:
 
