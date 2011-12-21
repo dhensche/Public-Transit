@@ -36,3 +36,4 @@ node google_transit.js
 ###Disclaimer:
 
 I did not pay very much attention to packages used or installation procedures. Most of the information I provide can be found online in better tutorials.
+This is not a 100% foolproof plan and may require different settings. If you use different settings let me know so I can update the readme with better information.
