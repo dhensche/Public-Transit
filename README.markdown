@@ -32,3 +32,7 @@ npm install sprintf
 
 node google_transit.js
 ```
+
+disclaimer:
+
+I did not pay very much attention to packages used or installation procedures. Most of the information I provide can be found online in better tutorials.
