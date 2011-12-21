@@ -1,0 +1,156 @@
+{
+	"year_round": {
+		"monday": 1,
+		"tuesday": 1,
+		"wednesday": 1,
+		"thursday": 1,
+		"friday": 1,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "year_start",
+		"end_date": "year_end"
+	},
+	"academic_spring": {
+		"monday": 1,
+		"tuesday": 1,
+		"wednesday": 1,
+		"thursday": 1,
+		"friday": 1,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "spring_start",
+		"end_date": "spring_end"
+	},
+	"academic_fall": {
+		"monday": 1,
+		"tuesday": 1,
+		"wednesday": 1,
+		"thursday": 1,
+		"friday": 1,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "fall_start",
+		"end_date": "fall_end"
+	},
+	"academic_wknd_spring": {
+		"monday": 0,
+		"tuesday": 0,
+		"wednesday": 0,
+		"thursday": 0,
+		"friday": 0,
+		"saturday": 1,
+		"sunday": 1,
+		"start_date": "spring_start",
+		"end_date": "spring_end"
+	},
+	"academic_wknd_fall": {
+		"monday": 0,
+		"tuesday": 0,
+		"wednesday": 0,
+		"thursday": 0,
+		"friday": 0,
+		"saturday": 1,
+		"sunday": 1,
+		"start_date": "fall_start",
+		"end_date": "fall_end"
+	},
+	"interim_summer": {
+		"monday": 1,
+		"tuesday": 1,
+		"wednesday": 1,
+		"thursday": 1,
+		"friday": 1,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "summer_start",
+		"end_date": "summer_end"
+	},
+	"interim_winter": {
+		"monday": 1,
+		"tuesday": 1,
+		"wednesday": 1,
+		"thursday": 1,
+		"friday": 1,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "winter_start",
+		"end_date": "winter_end"
+	},
+	"safe_ride_spring": {
+		"monday": 0,
+		"tuesday": 0,
+		"wednesday": 0,
+		"thursday": 0,
+		"friday": 1,
+		"saturday": 1,
+		"sunday": 0,
+		"start_date": "spring_start",
+		"end_date": "spring_end"
+	},
+	"safe_ride_fall": {
+		"monday": 0,
+		"tuesday": 0,
+		"wednesday": 0,
+		"thursday": 0,
+		"friday": 1,
+		"saturday": 1,
+		"sunday": 0,
+		"start_date": "fall_start",
+		"end_date": "fall_end"
+	},
+	"summer_wknd": {
+		"monday": 0,
+		"tuesday": 0,
+		"wednesday": 0,
+		"thursday": 0,
+		"friday": 0,
+		"saturday": 1,
+		"sunday": 1,
+		"start_date": "summer_start",
+		"end_date": "summer_end"
+	},
+	"summer": {
+		"monday": 1,
+		"tuesday": 1,
+		"wednesday": 1,
+		"thursday": 1,
+		"friday": 1,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "summer_start",
+		"end_date": "summer_end"
+	},
+	"saturday": {
+		"monday": 0,
+		"tuesday": 0,
+		"wednesday": 0,
+		"thursday": 0,
+		"friday": 0,
+		"saturday": 1,
+		"sunday": 0,
+		"start_date": "year_start",
+		"end_date": "year_end"
+	},
+	"thurs": {
+		"monday": 0,
+		"tuesday": 0,
+		"wednesday": 0,
+		"thursday": 1,
+		"friday": 0,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "year_start",
+		"end_date": "year_end"
+	},
+	"mtwf": {
+		"monday": 1,
+		"tuesday": 1,
+		"wednesday": 1,
+		"thursday": 0,
+		"friday": 1,
+		"saturday": 0,
+		"sunday": 0,
+		"start_date": "year_start",
+		"end_date": "year_end"
+	}
+}

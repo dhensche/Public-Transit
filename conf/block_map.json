@@ -1,0 +1,220 @@
+{
+	"uiowa": {
+		"studart": {
+			"academic_spring": [181, 185],
+			"academic_fall": [181, 185],
+			"academic_wknd_spring": [182],
+			"academic_wknd_fall": [182],
+			"interim_summer": [281],
+			"interim_winter": [281]
+		},
+		"blue": {
+			"academic_spring": [121, 122, 123],
+			"academic_fall": [121, 122, 123],
+			"academic_wknd_spring": [124],
+			"academic_wknd_fall": [124],
+			"safe_ride_spring": [125],
+			"safe_ride_fall": [125],
+			"interim_summer": [221, 222],
+			"interim_winter": [221, 222],
+			"unknown": [294, 295]
+		},
+		"red": {
+			"academic_spring": [111, 112, 113],
+			"academic_fall": [111, 112, 113],
+			"academic_wknd_spring": [114],
+			"academic_wknd_fall": [114],
+			"safe_ride_spring": [115],
+			"safe_ride_fall": [115],
+			"interim_summer": [211, 212],
+			"interim_winter": [211, 212],
+			"unknown": [292, 293]
+		},
+		"ecs": {
+			"year_round": [381]
+		},
+		"hawkdorm": {
+			"year_round": [151, 152],
+			"academic_wknd_spring": [153],
+			"academic_wknd_fall": [153],
+			"summer_wknd": [253],
+			"unknown": [251, 252]
+		},
+		"hawkexpress": {
+			"academic_spring": [161, 162],
+			"academic_fall": [161, 162]
+		},
+		"hawkhosp": {
+			"year_round": [361, 362, 363]
+		},
+		"hawklot": {
+			"year_round": [364, 365, 366, 367]
+		},
+		"hosphanch": {
+			"academic_spring": [171, 172],
+			"academic_fall": [171, 172],
+			"interim_summer": [271, 272],
+			"interim_winter": [271, 272]
+		},
+		"hospital": {
+			"year_round": [172, 371, 372, 373, 374],
+			"unknown": [273]
+		},
+		"hospva": {
+			"year_round": [172],
+			"unknown": [273, 375]
+		},
+		"interdorm": {
+			"academic_spring": [141, 142],
+			"academic_fall": [141, 142],
+			"summer": [241],
+			"unknown": [296, 297]
+		},
+		"mayflower": {
+			"academic_spring": [143],
+			"academic_fall": [143],
+			"unknown": [298]
+		},
+		"mts": {
+			"academic_spring": [183],
+			"academic_fall": [183]
+		},
+		"pentacrest": {
+			"year_round": [331, 332]
+		},
+		"pentnight": {
+			"year_round": [333, 334]
+		},
+		"research": {
+			"year_round": [335, 336, 337]
+		}
+	},
+	"coralville": {
+		"10thst": {
+			"year_round": [4, 31, 32, 61, 62]
+		},
+		"amexpress": {
+			"year_round": [71]
+		},
+		"midexpress": {
+			"year_round": [72, 73]
+		},
+		"pmexpress": {
+			"year_round": [74, 75]
+		},
+		"amnorthlib": {
+			"year_round": [151]
+		},
+		"pmnorthlib": {
+			"year_round": [152]
+		},
+		"lantern": {
+			"year_round": [2, 5, 11, 12, 13, 33]
+		},
+		"nightsat": {
+			"year_round": [81, 82],
+			"saturday": [111, 112, 113],
+			"unknown": [83]
+		},
+		"pmspecial": {
+			"year_round": [9]
+		}
+	},
+	"iowa-city": {
+		"7thave": {
+			"year_round": [28, 48]
+		},
+		"brdwy": {
+			"year_round": [3, 4, 33, 34, 53, 54]
+		},
+		"brdwynw": {
+			"year_round": [33, 34, 75],
+			"saturday": [103, 104, 133, 134]
+		},
+		"courthill": {
+			"year_round": [1, 2, 32, 51, 52, 61, 71],
+			"saturday": [101, 102, 132, 161]
+		},
+		"crosspark": {
+			"year_round": [28, 48]
+		},
+		"eastex": {
+			"year_round": [20, 29, 40, 49]
+		},
+		"esla": {
+			"year_round": [91]
+		},
+		"eslp": {
+			"mtwf": [81],
+			"thurs": [811]
+		},
+		"lakeside": {
+			"year_round": [1, 2, 32, 51, 52, 61, 71],
+			"saturday": [101, 102, 132, 161]
+		}, 
+		"mall": {
+			"year_round": [6, 26, 46, 56, 57, 66]
+		},
+		"manville": {
+			"year_round": [3, 4, 33, 34, 53, 54]
+		},
+		"manvillenw": {
+			"year_round": [33, 34],
+			"saturday": [103, 104, 133, 134]
+		},
+		"melrose": {
+			"year_round": [20, 29, 40, 49]
+		},
+		"ndodge": {
+			"year_round": [3, 4, 33, 34, 53, 54]
+		},
+		"ndodgenw": {
+			"year_round": [33, 34],
+			"saturday": [103, 104, 133, 134]
+		},
+		"oakcrst": {
+			"year_round": [5, 25, 65, 255],
+			"unknown": [45, 205, 265]
+		},
+		"oakcrstnw": {
+			"year_round": [75],
+			"saturday": [105, 165]
+		},
+		"plaenview": {
+			"year_round": [6, 26, 46, 56, 57, 66]
+		},
+		"rochester": {
+			"year_round": [6, 26, 46, 56, 57, 66]
+		},
+		"shuttlen": {
+			"year_round": [13, 613]
+		},
+		"shuttles": {
+			"year_round": [13, 613]
+		},
+		"towncrst": {
+			"year_round": [5, 25, 45, 65],
+			"unknown": [205, 255, 265]
+		},
+		"towncrstnw": {
+			"year_round": [75],
+			"saturday": [105, 165]
+		},
+		"westhosp": {
+			"year_round": [20, 29, 40, 49]
+		},
+		"westport": {
+			"year_round": [28, 48]
+		},
+		"westwinds": {
+			"year_round": [1, 2, 32, 51, 52, 61]
+		},
+		"westwindsnw": {
+			"year_round": [32, 71],
+			"saturday": [101, 102, 132, 161]
+		},
+		"wsl": {
+			"year_round": [466, 467]
+		}
+	}
+}
