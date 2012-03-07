@@ -60,6 +60,7 @@ var tripsBuilder = function(nextRoute, ebongoRoute, self) {
 			trips = self.tripsContent,
 			stopTimesContent = self.stopTimesContent;
 	
+	if (!services) return;
 	Object.keys(services).forEach(function(serviceId) {
 		var blocks = services[serviceId],
 				prevDirection;
