@@ -1,0 +1,12 @@
+{
+	"name": "ic-public-transit",
+	"version": "0.1.0",
+	"author": "Derek <derekhenscheid@gmail.com>",
+	"description": "Tool to transform Iowa City bus data into google transit feed",
+	"contributors": [
+		{
+			"name": "Derek Henscheid",
+			"email": "derekhenscheid@gmail.com"
+		}
+	]
+}
