@@ -8,5 +8,16 @@
       "name": "Derek Henscheid",
       "email": "derekhenscheid@gmail.com"
     }
-  ]
+  ],
+  "main": "./lib/ic-transit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhensche/Public-Transit.git"
+  },
+  "keywords": [
+    "bus",
+    "transit",
+    "uiowa"
+  ],
+  "license": "MIT"
 }
