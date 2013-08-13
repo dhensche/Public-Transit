@@ -27,6 +27,7 @@
     "node": ">=0.10.12"
   },
   "dependencies": {
-    "request": "~2.26.0"
+    "request": "~2.26.0",
+    "xml2js": "~0.2.8"
   }
 }
