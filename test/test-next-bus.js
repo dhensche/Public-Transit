@@ -72,11 +72,21 @@ describe('NextBus', function() {
       });
       
       describe('direction', function() {
-        it('should have tag and title properties')
-        it('should have non-empty array property stops');
+        it('should have tag and title properties', function() {
+          var direction = route.direction;
+          direction.should.have.property('tag');
+          direction.should.have.property('title');
+        })
+        it('should have non-empty array property stops', function() {
+          route.direction.stops.should.be.an.instanceof(Array).and.not.be.empty;
+        });
         
         describe('stops', function() {
-          it('should have property tag');
+          it('should have property tag', function() {
+            route.direction.stops.forEach(function(stop) {
+              stop.should.have.property('tag');
+            });
+          });
         });
       });
       
