@@ -9,7 +9,7 @@
       "email": "derekhenscheid@gmail.com"
     }
   ],
-  "main": "./lib/ic-transit",
+  "main": "./ic-transit",
   "repository": {
     "type": "git",
     "url": "https://github.com/dhensche/Public-Transit.git"
