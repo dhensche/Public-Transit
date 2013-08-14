@@ -49,19 +49,33 @@ describe('NextBus', function() {
     });
     
     describe('response', function() {
-      it('should have tag and title properties');
-      it('should have a non-empty array property stops');
-      it('should have a non-empty array property directions');
-      it('should have a non-empty array property paths');
-      
-      describe('stops', function() {
-        it('should have objects with tag, title and stopId properties');
+      it('should have tag, title and direction properties', function() {
+        route.should.have.property('tag');
+        route.should.have.property('title');
+        route.should.have.property('direction');
+      });
+      it('should have a non-empty array property stops', function() {
+        route.stops.should.be.an.instanceof(Array).and.not.be.empty;
+      });
+      it('should have a non-empty array property paths', function() {
+        route.paths.should.be.an.instanceof(Array).and.not.be.empty;
       });
       
-      describe('directions', function() {
-        it('should have objects with non-empty array property stopTags');
+      describe('stops', function() {
+        it('should have objects with tag, title and stopId properties', function() {
+          route.stops.forEach(function(stop) {
+            stop.should.have.property('tag');
+            stop.should.have.property('title');
+            should.exist(stop.stopId || stop.hidden);
+          });
+        });
+      });
+      
+      describe('direction', function() {
+        it('should have tag and title properties')
+        it('should have non-empty array property stops');
         
-        describe('stopTags', function() {
+        describe('stops', function() {
           it('should have property tag');
         });
       });
