@@ -121,4 +121,40 @@ describe('NextBus', function() {
       });
     });
   });
+  
+  describe('#schedule()', function() {
+    var schedule;
+    before(function(done) {
+      NextBus.schedule('uiowa', 'red', function(sched) {
+        schedule = sched;
+        done();
+      });
+    });
+    
+    it('should call callback with undefined if no route found', function(done) {
+      NextBus.route('invalid', 'invalid', function(invalid) {
+        should.not.exist(invalid);
+        done();
+      });
+    });
+    
+    describe('response', function() {
+      it('should have tag, title, scheduleClass, serviceClass and direction properties');
+      it('should have a nonempty array property stops');
+      it('should have a nonempty array property blocks');
+      
+      describe('stops', function() {
+        it('should have objects with tag and title properties');
+      });
+      
+      describe('block', function() {
+        it('should have objects with blockId property');
+        it('should have objects with nonempty array property stops');
+        
+        describe('stops', function() {
+          it('should have objects with tag, epochTime and stringTime properties');
+        });
+      });
+    });
+  })
 });
