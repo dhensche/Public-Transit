@@ -1,5 +1,9 @@
 var should = require('should'),
     NextBus = require('../lib/next-bus');
+    
+function nonEmptyArray(prop) {
+  prop.should.be.an.instanceof(Array).and.not.be.empty;
+}
 
 describe('NextBus', function() {
   describe('#routes()', function() {
@@ -20,7 +24,7 @@ describe('NextBus', function() {
     
     describe('response', function() {
       it('should not be a nonempty array', function() {
-        routes.should.be.an.instanceof(Array).and.not.be.empty;
+        nonEmptyArray(routes);
       });
       
       it('should have objects with tag and title properties', function() {
@@ -55,10 +59,10 @@ describe('NextBus', function() {
         route.should.have.property('direction');
       });
       it('should have a non-empty array property stops', function() {
-        route.stops.should.be.an.instanceof(Array).and.not.be.empty;
+        nonEmptyArray(route.stops);
       });
       it('should have a non-empty array property paths', function() {
-        route.paths.should.be.an.instanceof(Array).and.not.be.empty;
+        nonEmptyArray(route.paths);
       });
       
       describe('stops', function() {
@@ -78,7 +82,7 @@ describe('NextBus', function() {
           direction.should.have.property('title');
         })
         it('should have non-empty array property stops', function() {
-          route.direction.stops.should.be.an.instanceof(Array).and.not.be.empty;
+          nonEmptyArray(route.direction.stops);
         });
         
         describe('stops', function() {
@@ -91,10 +95,21 @@ describe('NextBus', function() {
       });
       
       describe('paths', function() {
-        it('should have objects with non-empty array property points');
+        it('should have objects with non-empty array property points', function() {
+          route.paths.forEach(function(path) {
+            nonEmptyArray(path);
+          })
+        });
         
         describe('points', function() {
-          it('should have lat and lon properties');
+          it('should have lat and lon properties', function() {
+            route.paths.forEach(function(points) {
+              points.forEach(function(point) {
+                point.should.have.property('lat');
+                point.should.have.property('lon');
+              })
+            });
+          });
         });
       });
     });
