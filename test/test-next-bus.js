@@ -56,13 +56,15 @@ describe('NextBus', function() {
       it('should have tag, title and direction properties', function() {
         route.should.have.property('tag');
         route.should.have.property('title');
-        route.should.have.property('direction');
       });
       it('should have a non-empty array property stops', function() {
         nonEmptyArray(route.stops);
       });
       it('should have a non-empty array property paths', function() {
         nonEmptyArray(route.paths);
+      });
+      it('should have a non-empty array property directions', function() {
+        nonEmptyArray(route.directions);
       });
       
       describe('stops', function() {
@@ -75,20 +77,25 @@ describe('NextBus', function() {
         });
       });
       
-      describe('direction', function() {
-        it('should have tag and title properties', function() {
-          var direction = route.direction;
-          direction.should.have.property('tag');
-          direction.should.have.property('title');
-        })
-        it('should have non-empty array property stops', function() {
-          nonEmptyArray(route.direction.stops);
+      describe('directions', function() {
+        it('should have objects with tag and title properties', function() {
+          route.directions.forEach(function(direction) {
+            direction.should.have.property('tag');
+            direction.should.have.property('title');
+          });
+        });
+        it('should have objects with non-empty array property stops', function() {
+          route.directions.forEach(function(direction) {
+            nonEmptyArray(direction.stops);
+          });
         });
         
         describe('stops', function() {
           it('should have property tag', function() {
-            route.direction.stops.forEach(function(stop) {
-              stop.should.have.property('tag');
+            route.directions.forEach(function(direction) {
+              direction.stops.forEach(function(stop) {
+                stop.should.have.property('tag');
+              });
             });
           });
         });
