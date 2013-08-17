@@ -139,20 +139,52 @@ describe('NextBus', function() {
     });
     
     describe('response', function() {
-      it('should have tag, title, scheduleClass, serviceClass and direction properties');
-      it('should have a nonempty array property stops');
-      it('should have a nonempty array property blocks');
+      it('should have tag, title, scheduleClass, serviceClass and direction properties', function() {
+        schedule.should.have.property('tag');
+        schedule.should.have.property('title');
+        schedule.should.have.property('scheduleClass');
+        schedule.should.have.property('serviceClass');
+        schedule.should.have.property('direction');
+      });
+      it('should have a nonempty array property stops', function() {
+        nonEmptyArray(schedule.stops);
+      });
+      it('should have a nonempty array property blocks', function() {
+        nonEmptyArray(schedule.blocks);
+      });
       
       describe('stops', function() {
-        it('should have objects with tag and title properties');
+        it('should have objects with tag and title properties', function() {
+          schedule.stops.forEach(function(stop) {
+            stop.should.have.property('tag');
+            stop.should.have.property('title');
+          })
+        });
       });
       
       describe('block', function() {
-        it('should have objects with blockId property');
-        it('should have objects with nonempty array property stops');
+        it('should have objects with blockId property', function() {
+          schedule.blocks.forEach(function(block) {
+            block.should.have.property('blockId');
+          });
+        });
+        it('should have objects with nonempty array property stops', function() {
+          schedule.blocks.forEach(function(block) {
+            nonEmptyArray(block.stops);
+          });
+        });
         
         describe('stops', function() {
-          it('should have objects with tag, epochTime and stringTime properties');
+          it('should have objects with tag, epochTime and stringTime properties', function() {
+            schedule.blocks.forEach(function(block) {
+              block.stops.forEach(function(stop) {
+                stop.should.have.property('tag');
+                stop.should.have.property('epochTime');
+                stop.should.have.property('stringTime');
+              });
+              
+            });
+          });
         });
       });
     });
