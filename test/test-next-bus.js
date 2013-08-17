@@ -188,5 +188,41 @@ describe('NextBus', function() {
         });
       });
     });
-  })
+  });
+  
+  describe('#messages()', function() {
+    var messages = {};
+    before(function(done) {
+      var c = 0;
+      
+      function handler(msgs, key) {
+              messages[key] = msgs;
+              c += 1;
+              if (c == 4) done();
+      }
+      
+      NextBus.messages('uiowa', function(msgs) {
+        handler(msgs, 'aMessages');
+      });
+      
+      NextBus.messages('uiowa', 'blue', function(msgs) {
+        handler(msgs, 'rMessages');
+      });
+      
+      NextBus.messages('uiowa', 'blue', 'red', function(msgs) {
+        handler(msgs, 'rMultMessages');
+      });
+      
+      NextBus.messages('uiowa', ['blue', 'red'], function(msgs) {
+        handler(msgs, 'rListMessages');
+      });
+    });
+    
+    it('should call callback with empty list if no messages found', function(done) {
+      NextBus.messages('invalidAgency', function(messages) {
+        messages.should.be.empty;
+        done();
+      });
+    });
+  });
 });
