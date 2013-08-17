@@ -193,28 +193,21 @@ describe('NextBus', function() {
   describe('#messages()', function() {
     var messages = {};
     before(function(done) {
-      var c = 0;
-      
-      function handler(msgs, key) {
-              messages[key] = msgs;
-              c += 1;
-              if (c == 4) done();
-      }
-      
-      NextBus.messages('uiowa', function(msgs) {
-        handler(msgs, 'aMessages');
-      });
-      
-      NextBus.messages('uiowa', 'blue', function(msgs) {
-        handler(msgs, 'rMessages');
-      });
-      
-      NextBus.messages('uiowa', 'blue', 'red', function(msgs) {
-        handler(msgs, 'rMultMessages');
-      });
-      
-      NextBus.messages('uiowa', ['blue', 'red'], function(msgs) {
-        handler(msgs, 'rListMessages');
+      NextBus.messages('iowa-city', function(msgs) {
+        messages.aMessages = msgs;
+        
+        NextBus.messages('uiowa', 'blue', function(msgs) {
+          messages.rMessages = msgs;
+          
+          NextBus.messages('uiowa', 'blue', 'red', function(msgs) {
+            messages.rMultiMessages = msgs;
+            
+            NextBus.messages('uiowa', ['blue', 'red'], function(msgs) {
+              messages.rListMessages = msgs;
+              done();
+            });
+          });
+        });
       });
     });
     
@@ -224,5 +217,21 @@ describe('NextBus', function() {
         done();
       });
     });
+    
+    it('should not fail if passed no route', function() {
+      should.exist(messages.aMessages);
+    });
+    
+    it('should not fail if passed single route', function() {
+      should.exist(messages.rMessages);
+    });
+    
+    it('should not fail if passed multiple routes', function() {
+      should.exist(messages.rMultiMessages);
+    });
+    
+    it('should not fail if passed list of routes', function() {
+      should.exist(messages.rListMessages);
+    })
   });
 });
