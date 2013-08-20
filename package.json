@@ -9,15 +9,29 @@
       "email": "derekhenscheid@gmail.com"
     }
   ],
-  "main": "./lib/ic-transit",
+  "main": "./ic-transit",
   "repository": {
     "type": "git",
     "url": "https://github.com/dhensche/Public-Transit.git"
+  },
+  "bugs": {
+    "url": "http://github.com/dhensche/Public-Transit/issues"
   },
   "keywords": [
     "bus",
     "transit",
     "uiowa"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.12"
+  },
+  "dependencies": {
+    "request": "~2.26.0",
+    "xml2js": "~0.2.8"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "should": "~1.2.2"
+  }
 }
