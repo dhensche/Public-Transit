@@ -286,4 +286,16 @@ describe('NextBus', function() {
       });
     });
   });
+  
+  describe('#predictions()', function () {
+    it('should exist');
+  });
+  
+  describe('#multiStopPredictions()', function() {
+    it('should exist');
+  });
+  
+  describe('#vehicleLocations()', function() {
+    it('should exist');
+  });
 });
