@@ -9,6 +9,9 @@
       "email": "derekhenscheid@gmail.com"
     }
   ],
+  "scripts": {
+    "test": "node_modules/.bin/mocha --recursive"
+  },
   "main": "./ic-transit",
   "repository": {
     "type": "git",
