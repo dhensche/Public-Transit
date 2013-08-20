@@ -232,6 +232,58 @@ describe('NextBus', function() {
     
     it('should not fail if passed list of routes', function() {
       should.exist(messages.rListMessages);
-    })
+    });
+    
+    // messages are transient so these tests may fail
+    describe('response', function() {
+      
+      it('should have nonempty array property called routes', function() {
+        nonEmptyArray(messages.aMessages);
+      });
+        
+        
+      describe('routes', function() {
+        it('should have tag property', function() {
+          messages.aMessages.forEach(function(route) {
+            route.should.have.property('tag');
+          });
+        });
+          
+        it('should have nonempty array property messages', function() {
+          messages.aMessages.forEach(function(route) {
+            // this condition only for messages at Aug 18, 2013
+            if(route.tag != 'all') {
+              nonEmptyArray(route.messages);
+            }
+          });
+        });
+          
+        describe('messages', function() {
+          it('should have id, creator and sendToBuses properties', function() {
+            messages.aMessages.forEach(function(route) {
+              route.messages.forEach(function(message) {
+                message.should.have.property('id');
+                message.should.have.property('sendToBuses');
+                message.should.have.property('creator');
+                message.should.have.property('text');
+              });
+            });
+          });
+                        
+          it('should have messageRoutes property for not "all" routes', function() {
+            messages.aMessages.forEach(function(route) {
+              if(route.tag != 'all') {
+                route.messages.forEach(function(message) {
+                  nonEmptyArray(message.messageRoutes);
+                  message.messageRoutes.forEach(function(route) {
+                    route.should.have.property('tag');
+                  });
+                });
+              }
+            });
+          });
+        });
+      });
+    });
   });
 });
