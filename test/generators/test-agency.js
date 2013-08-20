@@ -1,4 +1,5 @@
 var should = require('should'),
+    fs = require('fs'),
     Agency = require('../../lib/generators/agency');
     
 describe('agency', function() {
@@ -14,5 +15,14 @@ describe('agency', function() {
     agency.generate();
   });
   
-  it('should have created agency.txt in dist/ when done');
+  it('should have created agency.txt in dist/ when done', function(done) {
+    var agency = new Agency();
+    agency.on('done', function() {
+      fs.exists(__dirname + '/../../dist/agency.txt', function(exists) {
+        exists.should.be.true;
+        done();
+      });
+    });
+    agency.generate();
+  });
 })
