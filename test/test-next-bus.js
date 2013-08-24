@@ -68,10 +68,12 @@ describe('NextBus', function() {
       });
       
       describe('stops', function() {
-        it('should have objects with tag, title and stopId properties', function() {
+        it('should have objects with tag, title, lat, lon and stopId properties', function() {
           route.stops.forEach(function(stop) {
             stop.should.have.property('tag');
             stop.should.have.property('title');
+            stop.should.have.property('lat');
+            stop.should.have.property('lon');
             should.exist(stop.stopId || stop.hidden);
           });
         });
