@@ -1,5 +1,6 @@
 var should = require('should'),
     fs = require('fs'),
+    path = require('path'),
     Agency = require('../../lib/generators/agency');
     
 describe('agency', function() {
@@ -18,7 +19,8 @@ describe('agency', function() {
   it('should have created agency.txt in dist/ when done', function(done) {
     var agency = new Agency();
     agency.on('done', function() {
-      fs.exists(__dirname + '/../../dist/agency.txt', function(exists) {
+      var file = path.join(__dirname, '../..', 'dist/agency.txt');
+      fs.exists(file, function(exists) {
         exists.should.be.true;
         done();
       });

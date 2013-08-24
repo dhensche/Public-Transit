@@ -1,6 +1,3 @@
-var NextBus = require('./lib/next-bus.js'),
-    util = require('util');
+var Agency = require('./lib/generators/agency');
 
-NextBus.messages('iowa-city', function(routes) {
-  console.log(util.inspect(routes, {depth: 6}));
-});
+new Agency().generate();
