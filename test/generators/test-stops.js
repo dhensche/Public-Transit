@@ -27,4 +27,4 @@ describe('stops', function() {
     });
     stops.generate();
   });
-})
+});
