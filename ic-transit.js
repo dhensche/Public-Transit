@@ -1,3 +1,3 @@
-var Agency = require('./lib/generators/agency');
+var Routes = require('./lib/generators/routes');
 
-new Agency().generate();
+new Routes().generate();
