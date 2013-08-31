@@ -32,7 +32,7 @@
   "dependencies": {
     "request": "~2.26.0",
     "xml2js": "~0.2.8",
-    "csv": "~0.3.6"
+    "csv": "https://github.com/dhensche/node-csv/tarball/master"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
